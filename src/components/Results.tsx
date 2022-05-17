@@ -7,9 +7,9 @@ type ResultsPropsType = {
         icon: string;
     }
 }
-const Results = (props: ResultsPropsType) => {
+const Results = ({results}: ResultsPropsType) => {
     // 分割代入
-    const {cityName, country, temperature, conditionText, icon} = props.results;
+    const {cityName, country, temperature, conditionText, icon} = results;
     return (
         <div>
             {cityName && <div>{cityName}</div>}
