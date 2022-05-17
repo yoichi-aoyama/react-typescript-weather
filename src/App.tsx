@@ -33,13 +33,14 @@ function App() {
                     conditionText: data.current.condition.text,
                     icon: data.current.condition.icon
                 })
+                setCity("");
             })
             .catch(err => alert("エラーが発生しました。ページをリロードしてください。"))
     }
     return (
         <div className="App">
             <Title/>
-            <Form setCity={setCity} getWeather={getWeather}/>
+            <Form setCity={setCity} getWeather={getWeather} city={city}/>
             <Results results={results}/>
         </div>
     );
