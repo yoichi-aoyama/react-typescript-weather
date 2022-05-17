@@ -11,7 +11,7 @@ const Results = ({results}: ResultsPropsType) => {
     // 分割代入
     const {cityName, country, temperature, conditionText, icon} = results;
     return (
-        <div>
+        <>
             {cityName && <div>{cityName}</div>}
             {country && <div>{country}</div>}
             {temperature && <div>{temperature} <span>℃</span></div>}
@@ -21,7 +21,7 @@ const Results = ({results}: ResultsPropsType) => {
                     <span>{conditionText}</span>
                 </div>
             }
-        </div>
+        </>
     );
 };
 
